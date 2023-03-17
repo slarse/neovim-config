@@ -54,4 +54,5 @@ return require('packer').startup(function(use)
     -- themes
     use 'joshdick/onedark.vim'
     use 'mhartington/oceanic-next'
+    use { 'rose-pine/neovim', as = 'rose-pine' }
 end)
