@@ -8,3 +8,11 @@ vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv")
 -- search term in middle
 vim.keymap.set('n', 'n', 'nzzzv')
 vim.keymap.set('n', 'N', 'Nzzzv')
+
+-- brackets
+vim.keymap.set('i', '<leader>u', '()<Left>')
+vim.keymap.set('i', '<leader><leader>u', '()')
+vim.keymap.set('i', '<leader>e', '[]<Left>')
+vim.keymap.set('i', '<leader><leader>e', '[]')
+vim.keymap.set('i', '<leader>,', '{}<Left>')
+vim.keymap.set('i', '<leader><leader>,', '{}')
