@@ -1,8 +1,9 @@
 local lsp = require('lsp-zero')
+local cmp = require('cmp')
 
 lsp.preset({
-    name='recommended',
-    set_lsp_keymaps = {omet = {'<F2>'}},
+    name='minimal',
+    set_lsp_keymaps = {omit = {'<F2>'}},
     manage_nvim_cmp = true,
     suggest_lsp_servers = false,
 })
@@ -21,5 +22,12 @@ lsp.ensure_installed({
 	'rust_analyzer',
 	'pyright',
 })
+
+local keymap = vim.api.nvim_set_keymap
+local opts = { noremap = true, silent = true }
+keymap("i", "<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>", opts)
+keymap("s", "<c-j>", "<cmd>lua require'luasnip'.jump(1)<CR>", opts)
+keymap("i", "<c-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>", opts)
+keymap("s", "<c-k>", "<cmd>lua require'luasnip'.jump(-1)<CR>", opts)
 
 lsp.setup()
