@@ -16,3 +16,11 @@ vim.keymap.set('i', '<leader>e', '[]<Left>')
 vim.keymap.set('i', '<leader><leader>e', '[]')
 vim.keymap.set('i', '<leader>,', '{}<Left>')
 vim.keymap.set('i', '<leader><leader>,', '{}')
+vim.keymap.set('i', '<leader><', '<><Left>')
+vim.keymap.set('i', '<leader><leader><', '<>')
+
+-- strings
+vim.keymap.set('i', "<leader>'", "''<Left>")
+vim.keymap.set('i', "<leader><leader>'", "''")
+vim.keymap.set('i', '<leader>"', '""<Left>')
+vim.keymap.set('i', '<leader><leader>"', '""')
